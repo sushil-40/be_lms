@@ -5,4 +5,3 @@ import UesrSchema from "./UserSchema.js";
 export const createNewUser = (userObj) => {
   return UesrSchema(userObj).save();
 };
-UesrSchema;
