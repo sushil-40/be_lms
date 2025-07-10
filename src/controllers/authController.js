@@ -31,7 +31,7 @@ export const insertNewUser = async (req, res, next) => {
     if (error.message.includes("E11000 duplicate key error collection")) {
       error.message =
         "The email already exists for another user, try different emai or reset the password";
-      error.statusCode = 200;
+      error.statusCode = 400;
     }
     next(error);
   }
